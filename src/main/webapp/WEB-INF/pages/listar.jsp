@@ -13,6 +13,14 @@
 
 </head>
 <body>
+	<s:form action="${pageContext.request.contextPath }/inicio" method="get">
+		<table>
+			<tr>
+				<td></td>
+				<td align="right"><input type="submit" value="Página Inicial" /></td>
+			</tr>
+		</table>
+	</s:form>
 	
 	<h1>Usuários</h1>
 	
@@ -21,12 +29,16 @@
 			<table>
 				<tr>
 					<td><h3>Nome</h3></td>
+					<td><h3>CPF</h3></td>
+					<td><h3>Data de Nascimento</h3></td>
 					
 				</tr>
 
 				<c:forEach var="usuario" items="${listaUsuarios}">
 					<tr>
 						<td>${usuario.nome}</td>
+						<td>${usuario.cpf}</td>
+						<td>${usuario.dataNascimento}</td>
 					</tr>
 				</c:forEach>
 			</table>
