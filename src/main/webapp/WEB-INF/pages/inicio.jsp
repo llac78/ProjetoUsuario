@@ -26,6 +26,15 @@
 
 </head>
 <body>
+	<s:form action="${pageContext.request.contextPath }/listar" method="get">
+		<table>
+			<tr>
+				<td></td>
+				<td align="right"><input type="submit" value="Listar Usuários" /></td>
+			</tr>
+		</table>
+	</s:form>
+
 	<h1>Cadastro de Usuários</h1>
 	
 	<s:form action="${pageContext.request.contextPath }/salvar"

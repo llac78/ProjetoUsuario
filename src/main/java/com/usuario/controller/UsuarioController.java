@@ -2,7 +2,9 @@ package com.usuario.controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -48,7 +50,7 @@ public class UsuarioController {
 		return mv;
 	}
 
-	@PostMapping()
+	@PostMapping("/salvar")
 	public ModelAndView salvar(@Valid @ModelAttribute("usuario_form") Usuario usuario, BindingResult result)
 			throws Exception {
 
@@ -71,7 +73,28 @@ public class UsuarioController {
 			 
 			 return mv;
 		}
-
+	}
+	
+	@GetMapping("/listar")
+	public ModelAndView listar(){
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("listar");
+		
+		List<Usuario> listaUsuarios = new ArrayList<>();
+		listaUsuarios = this.listarUsuarios();
+		
+		mv.addObject("listaUsuarios", listaUsuarios);
+		
+		return mv;
+	}
+	
+	public List<Usuario> listarUsuarios(){
+		
+		List<Usuario> listaUsuarios = new ArrayList<Usuario>();
+		listaUsuarios = this.usuarioService.listarUsuarios();
+	
+		return listaUsuarios;
 	}
 
 //	 @ExceptionHandler({UsuarioException.class})
