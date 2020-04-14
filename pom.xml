@@ -7,7 +7,11 @@
 	<packaging>war</packaging>
 
 	<properties>
+<<<<<<< HEAD
 		<spring.version>5.2.5.RELEASE</spring.version>
+=======
+		<spring.version>5.1.0.RELEASE</spring.version>
+>>>>>>> ca0c6e1db8fc37f5361f81715824361a7d22001c
 		<hibernate.version>5.3.7.Final</hibernate.version>
 		<mysql.connector.version>8.0.13</mysql.connector.version>
         <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -56,9 +60,15 @@
 		</dependency>
 
 		<dependency>
+<<<<<<< HEAD
 		    <groupId>org.springframework.data</groupId>
 		    <artifactId>spring-data-jpa</artifactId>
 		    <version>2.2.6.RELEASE</version>
+=======
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>2.1.9.RELEASE</version>
+>>>>>>> ca0c6e1db8fc37f5361f81715824361a7d22001c
 		</dependency>
 		
 		
